@@ -1,0 +1,95 @@
+.container{
+ height: 800px !important;
+}
+
+.box{
+    background-image: url("./images/office-image1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:1px 1px 5px  #000;
+
+}
+.col-lg-4{
+    text-align: -webkit-center;
+}
+.box::before{
+    content: "";
+    position: absolute;
+   height: 80%;
+   width: 80%;
+   left: 35px;
+   top: 35px;
+    transition: all 1s ease;
+    border-radius: 10px;
+
+}
+.box:hover:before{
+    background-color: rgba(0, 0, 0, 0.447);
+    transition: all 1s ease;
+    transform: scale(1.25) rotate(90deg);
+   
+}
+.box span i{
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff;
+    position: relative;
+    visibility: hidden;
+}
+.box span i:hover{
+    -webkit-transform: scale(1.4) rotate(360deg);
+    transition: all 2s ease;   
+}
+.box:hover.box span i{
+    visibility: visible;
+    
+}
+.image2{
+    background-image: url("./images/office-image2.jpg");
+  
+
+}
+.image3{
+    background-image: url("./images/office-image-7.webp");
+  
+
+}
+.image4{
+    background-image: url("./images/office-image-4.jpg");
+  
+
+}
+.image5{
+    background-image: url("./images/office-image-5.jpg");
+  
+
+}
+.image6{
+    background-image: url("./images/office-image-6.jpg");
+  
+
+}
+/* // media query  */
+@media screen and (min-width:700px) and (max-width:1170px){
+    .box{
+        width: unset !important;
+        margin-bottom: 2rem;
+    }
+    
+}
+@media screen and (min-width:270px) and (max-width:700px){
+    .box{
+        margin-bottom: 2rem;
+    }
+
+}
